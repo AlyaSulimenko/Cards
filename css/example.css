@@ -1,0 +1,59 @@
+.example__container {
+  background-color: #f8f398;
+}
+.example__container:before {
+  content: "";
+  background-color: pink;
+  position: absolute;
+  width: 14.57%; /*w by maket 153 / parent by maket with paddings 1050 *100 */
+  padding-top: 22.95%; /*we use padding-top instead of height for it to be in depence from width of parent, not the height:  241 h by maket/ 1050*100 */
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.example__header {
+  margin-bottom: 25px;
+  max-width: 46.875rem; /*750px by maket/16px*/
+}
+.example__subtitle {
+  color: plum;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 170%; /*24px lh from maket / 14px fz from maket *100%*/
+  margin-bottom: 1.07em; /*em because we use inherited font-size for calculating it, not the default*/
+}
+.example__title {
+  color: aqua;
+  text-transform: uppercase;
+  font-size: 2.625rem;
+  line-height: 119%;
+  margin-bottom: 0.38em;
+  letter-spacing: 0.12em;
+}
+.example__text {
+  line-height: 150%;
+}
+.example__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.125rem, 1fr));
+  gap: 24px;
+}
+.item-example {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 23px;
+       column-gap: 23px;
+}
+.item-example__icon img {
+  max-width: 63px;
+  max-height: 63px;
+}
+.item-example__body {
+  vertical-align: middle;
+}
+.item-example__title {
+  color: #e46161;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 0.45em;
+}
